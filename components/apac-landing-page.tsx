@@ -153,7 +153,7 @@ export function ApacLandingPage() {
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="text-center md:text-left mb-6 md:mb-0">
             <GradientText className="text-2xl font-bold mb-2">APAC</GradientText>
-            <p className="text-gray-400">Investing in Humanity's Future</p>
+            <p className="text-gray-400">Investing in Humanitys Future</p>
           </div>
           <nav className="flex space-x-6">
             <Link href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Privacy Policy</Link>
