@@ -3,8 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Cpu, Zap, Rocket, ArrowRight, Github } from "lucide-react"
+import { Cpu, Zap, Rocket,  Github } from "lucide-react"
 import Link from "next/link"
 
 const GradientText = ({ children, className = "" }) => (
@@ -73,10 +72,7 @@ export function ApacLandingPage() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              {/* <Button className="bg-blue-500 text-black hover:bg-blue-400 mr-4">
-                Explore Our Portfolio
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button> */}
+
               <Button variant="outline" onClick={redirectToEmail} className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-black">
                 Pitch Us Now
               </Button>
