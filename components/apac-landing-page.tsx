@@ -1,18 +1,32 @@
 'use client'
 
-import React from 'react'
 import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button"
-import { Cpu, Zap, Rocket,  Github } from "lucide-react"
+import { Cpu, Zap, Rocket,  Github, LucideProps } from "lucide-react"
 import Link from "next/link"
+import React, { ReactNode } from 'react';
 
-const GradientText = ({ children, className = "" }) => (
+
+// Define the props for FeatureCard
+interface FeatureCardProps {
+  icon: React.FC<LucideProps>; // LucideProps from lucide-react to type the icons
+  title: string;
+  description: string;
+}
+
+interface GradientTextProps {
+  children: ReactNode;
+  className?: string;
+}
+
+const GradientText: React.FC<GradientTextProps> = ({ children, className = "" }) => (
   <span className={`bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-green-400 ${className}`}>
     {children}
   </span>
-)
+);
 
-const FeatureCard = ({ icon: Icon, title, description }) => (
+// FeatureCard component
+const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, description }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
@@ -23,7 +37,7 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
     <h3 className="text-xl font-semibold mb-2">{title}</h3>
     <p className="text-gray-400">{description}</p>
   </motion.div>
-)
+);
 
 const redirectToEmail = () => {
   window.location.href = "mailto:kye@apac.ai";
